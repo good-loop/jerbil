@@ -2,7 +2,6 @@ package com.goodloop.jerbil;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Arrays;
@@ -10,16 +9,13 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import com.microsoft.playwright.Browser;
+import com.microsoft.playwright.Browser.NewContextOptions;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
-import com.microsoft.playwright.Page.PdfOptions;
 import com.microsoft.playwright.Page.ScreenshotOptions;
 import com.microsoft.playwright.Playwright;
 import com.microsoft.playwright.Response;
-import com.microsoft.playwright.Browser.NewContextOptions;
-import com.microsoft.playwright.options.Margin;
-import com.microsoft.playwright.options.ScreenshotScale;
 import com.winterwell.utils.FailureException;
 import com.winterwell.utils.Mutable;
 import com.winterwell.utils.Utils;

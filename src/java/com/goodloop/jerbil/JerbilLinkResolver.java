@@ -7,9 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.vladsch.flexmark.ast.Node;
+import com.vladsch.flexmark.util.ast.Node;
 import com.vladsch.flexmark.html.LinkResolver;
-import com.vladsch.flexmark.html.renderer.LinkResolverContext;
+import com.vladsch.flexmark.html.renderer.LinkResolverBasicContext;
 import com.vladsch.flexmark.html.renderer.ResolvedLink;
 import com.winterwell.utils.Dep;
 import com.winterwell.utils.Printer;
@@ -30,7 +30,7 @@ class JerbilLinkResolver implements LinkResolver {
 	Map<String,String> urlForLink = new HashMap();
 	
 	@Override
-	public ResolvedLink resolveLink(Node arg0, LinkResolverContext arg1, ResolvedLink arg2) {		
+	public ResolvedLink resolveLink(Node arg0, LinkResolverBasicContext arg1, ResolvedLink arg2) {		
 //		Document doc = arg1.getDocument();
 //		String target = arg2.getTarget();
 //		LinkType lt = arg2.getLinkType();

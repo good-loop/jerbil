@@ -6,9 +6,9 @@ import com.vladsch.flexmark.html.HtmlRenderer.Builder;
 import com.vladsch.flexmark.html.HtmlRenderer.HtmlRendererExtension;
 import com.vladsch.flexmark.html.LinkResolver;
 import com.vladsch.flexmark.html.LinkResolverFactory;
-import com.vladsch.flexmark.html.renderer.LinkResolverContext;
+import com.vladsch.flexmark.html.renderer.LinkResolverBasicContext;
 import com.vladsch.flexmark.parser.Parser;
-import com.vladsch.flexmark.util.options.MutableDataHolder;
+import com.vladsch.flexmark.util.data.MutableDataHolder;
 
 /**
  * Wow this is a complex mess to implement a link-resolver. 
@@ -54,17 +54,17 @@ class JerbilLinkResolverFactory implements LinkResolverFactory {
 	}
 
 	@Override
-	public LinkResolver create(LinkResolverContext arg0) {
+	public LinkResolver apply(LinkResolverBasicContext arg0) {
 		return new JerbilLinkResolver();
 	}
 
 	@Override
-	public Set<Class<? extends LinkResolverFactory>> getAfterDependents() {
+	public Set<Class<?>> getAfterDependents() {
 		return null;
 	}
 
 	@Override
-	public Set<Class<? extends LinkResolverFactory>> getBeforeDependents() {
+	public Set<Class<?>> getBeforeDependents() {
 		return null;
 	}
 	
